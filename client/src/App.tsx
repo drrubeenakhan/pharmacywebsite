@@ -1301,8 +1301,9 @@ const App: React.FC = () => {
       {currentView === 'HOME' && (
       <>
       {/* 1. HERO */}
-      <div className="hero pt-32 pb-16 md:pt-40 md:pb-24 px-6 md:px-12 max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start relative z-10">
+      <div className="hero-section">
+        <div className="hero-inner pt-32 pb-16 md:pt-40 md:pb-24 lg:pt-44 lg:pb-28 px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-24 max-w-6xl lg:max-w-7xl xl:max-w-[1400px] 2xl:max-w-[1600px] mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 xl:gap-20 2xl:gap-24 items-start">
           
           {/* LEFT COLUMN */}
           <div className="lg:col-span-5 flex flex-col justify-center">
@@ -1360,6 +1361,7 @@ const App: React.FC = () => {
             />
           </div>
 
+          </div>
         </div>
       </div>
 

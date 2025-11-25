@@ -38,3 +38,85 @@
     @apply ring-2 ring-ida ring-offset-2;
   }
 }
+
+/* HERO SECTION - Desktop-only fixed background */
+.hero-section {
+  position: relative;
+  overflow: clip;
+  isolation: isolate;
+}
+
+/* Background layer - Desktop only (lg: 1024px+) */
+@media (min-width: 1024px) {
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/images/hero-handprints.jpeg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  /* Subtle scrim overlay for text readability - Desktop only */
+  .hero-section::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(253, 252, 248, 0.88) 0%,
+      rgba(253, 252, 248, 0.75) 35%,
+      rgba(253, 252, 248, 0.55) 60%,
+      rgba(253, 252, 248, 0.35) 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+}
+
+/* Hero content wrapper - always above background layers */
+.hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+/* Desktop responsive adjustments for hero */
+@media (min-width: 1024px) {
+  .hero-section {
+    min-height: clamp(600px, 70vh, 800px);
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-section {
+    min-height: clamp(650px, 72vh, 850px);
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero-section {
+    min-height: clamp(680px, 75vh, 900px);
+  }
+}
+
+@media (min-width: 1680px) {
+  .hero-section {
+    min-height: clamp(700px, 78vh, 950px);
+  }
+}
+
+@media (min-width: 1920px) {
+  .hero-section {
+    min-height: clamp(720px, 80vh, 1000px);
+  }
+}
+
+@media (min-width: 2560px) {
+  .hero-section {
+    min-height: clamp(750px, 82vh, 1100px);
+  }
+}

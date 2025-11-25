@@ -75,6 +75,14 @@ npm run preview
 - LCP: <2.5s mobile, <1.5s desktop
 
 ## Recent Changes
+- November 25, 2025: Desktop Hero Section Background Enhancement
+  - Added colorful handprints background image to hero section (desktop only)
+  - Implemented fixed parallax background with `background-attachment: fixed`
+  - Added subtle gradient scrim overlay for text readability
+  - Background uses proper z-index layering with pointer-events: none
+  - Responsive desktop scaling for widths: 1024px, 1280px, 1440px, 1680px, 1920px, 2560px
+  - Mobile styling unchanged - background only appears at lg: (1024px+) breakpoint
+
 - November 2024: Optimized for Vercel deployment using Vite Performance Playbook
   - Migrated from CDN Tailwind to proper Tailwind build
   - Added optimized HTML template with proper meta tags
