@@ -870,7 +870,7 @@ const Footer = ({
   onNavigateToService: (id: string) => void,
   onNavigateToHomeAndScroll: (section: string) => void
 }) => (
-  <footer className="bg-ida text-white py-16 px-6 md:px-12 mt-auto border-t border-ida-light/30">
+  <footer className="bg-ida text-white py-16 px-6 md:px-12 mt-auto">
     <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
       {/* Column 1: Brand & Contact */}
       <div className="space-y-6">
