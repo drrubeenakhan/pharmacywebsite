@@ -1,0 +1,57 @@
+You are a senior front-end engineer. Modify ONLY desktop mode layout/CSS for the hero section so the UI is perfectly usable and responsive on desktop while using a fixed background image that never interferes with UI interaction.
+
+Background image (hero-only): url("/mnt/data/ecf32f85-ad6a-4d73-9789-6476aad7770a.jpg")
+
+Non-negotiables
+
+Mobile styling must remain exactly unchanged. Touch desktop only using min-width media queries (or Tailwind lg: / xl: / 2xl:).
+
+Do not change copy, labels, component content, or overall page structure.
+
+Do not add/remove UI elements or sections.
+
+Only allowed edits: desktop-only layout rules, spacing, max widths, grid/flex behavior, clamp sizing, and hero-only background layering.
+
+Background image requirements (must implement exactly)
+
+The background must be applied ONLY to the hero and must not appear elsewhere.
+
+The background must be fixed (parallax-style) on desktop: background-attachment: fixed;
+
+The background must be visually responsive: background-size: cover; background-position: center;
+
+The background must not capture clicks or affect scrolling: put it on a separate layer with pointer-events: none; and correct z-index stacking.
+
+Add an optional minimal scrim overlay (hero-only) to guarantee text readability. Keep it subtle.
+
+Desktop usability requirements
+
+Must look correct and readable at these desktop widths:
+1024, 1280, 1440, 1680, 1920, 2560
+
+No overlapping UI
+
+No horizontal scrollbars
+
+No clipped CTAs/cards
+
+No awkward empty space at the bottom of the hero
+
+Two-column hero on desktop (left content, right card), collapsing to one column only when needed on desktop threshold.
+
+Required implementation pattern
+
+Use a .hero wrapper with:
+
+position: relative; overflow: clip; isolation: isolate;
+
+A background layer implemented either via:
+
+::before absolute layer with background-image and background-attachment: fixed, OR
+
+a dedicated .heroBg child div behind content
+In both cases: pointer-events: none; z-index: 0;
+
+Optional ::after scrim overlay above background but below content (z-index: 1)
+
+Content wrapper .heroInner above everything (z-index: 2)

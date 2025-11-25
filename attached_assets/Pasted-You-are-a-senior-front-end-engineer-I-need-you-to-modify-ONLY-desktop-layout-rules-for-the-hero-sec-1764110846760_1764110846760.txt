@@ -1,0 +1,64 @@
+You are a senior front-end engineer. I need you to modify ONLY desktop layout rules for the hero section shown in this screenshot. Mobile must remain exactly as-is. Do not redesign components, do not change copy, do not change the app structure outside the hero.
+
+Reference image (for context only): /mnt/data/ecf32f85-ad6a-4d73-9789-6476aad7770a.jpg
+
+Objective
+
+Fix desktop mode responsiveness/usability so the hero layout looks intentional and consistent at these widths:
+1024, 1280, 1440, 1680, 1920, 2560.
+
+Hard constraints
+
+Do not change mobile styling at all. Mobile behavior must be untouched.
+
+Do not change any text, labels, buttons, or content order.
+
+Do not add new UI sections.
+
+Only allowed edits: desktop-only CSS/Tailwind classes, spacing, grid/flex rules, max-widths, clamp sizing, and hero-only background layering.
+
+The handprints asset is a hero-only background layer (not content), pointer-events: none, and must not appear outside the hero.
+
+No horizontal scrollbars. No overlapping UI. No awkward empty bottom space.
+
+Required solution pattern (desktop-only)
+
+Implement desktop changes using only min-width media queries (or Tailwind lg:/xl: etc) so nothing affects mobile:
+
+Hero wrapper: stable min-height and controlled overflow.
+
+Centered content container with a max width (pick the best value).
+
+Two-column layout on desktop: left = headline/CTAs, right = status card.
+
+Collapse to one column only when the viewport is too narrow for the two-column layout (desktop threshold only).
+
+Add a subtle hero-only scrim overlay for readability if needed, but keep the look minimal.
+
+Deliverables
+
+Return:
+
+The exact desktop-only CSS (or Tailwind class changes) to apply to:
+
+.hero wrapper
+
+inner container
+
+left content block
+
+right status card block
+
+hero background layers (::before + optional ::after scrim)
+
+If you need to introduce wrapper divs, do it minimally and show the updated snippet.
+
+A tiny “tested widths” checklist confirming no overlap and no horizontal scroll at each target width.
+
+Output rules
+
+Provide copy-pasteable code blocks only.
+
+Do not include explanations beyond the required checklist.
+
+If you must choose between background-size: cover vs contain, choose one and implement it (no debate).
