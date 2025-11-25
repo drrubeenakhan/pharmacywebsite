@@ -46,42 +46,43 @@
   isolation: isolate;
 }
 
-/* Background layer - Mobile (up to 767px) - Creative peek from bottom */
+/* Background layer - Mobile (up to 767px) - Handprints at bottom */
 @media (max-width: 767px) {
+  .hero-section {
+    min-height: auto;
+    padding-bottom: 180px;
+  }
+  
   .hero-section::before {
     content: '';
     position: absolute;
-    left: 0;
-    right: 0;
+    left: -10%;
+    right: -10%;
     bottom: 0;
-    height: 45%;
-    background-image: url('/images/hero-handprints-mobile.webp');
-    background-image: image-set(
-      url('/images/hero-handprints-mobile.webp') type('image/webp'),
-      url('/images/hero-handprints-mobile.jpg') type('image/jpeg')
-    );
-    background-attachment: scroll;
-    background-size: 140% auto;
-    background-position: center top;
+    height: 200px;
+    background-image: url('/images/hero-handprints-mobile.jpg');
+    background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
     pointer-events: none;
     z-index: 0;
-    mask-image: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.7) 0%,
-      rgba(0, 0, 0, 0.4) 40%,
-      rgba(0, 0, 0, 0) 100%
-    );
-    -webkit-mask-image: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.7) 0%,
-      rgba(0, 0, 0, 0.4) 40%,
-      rgba(0, 0, 0, 0) 100%
-    );
   }
   
   .hero-section::after {
-    display: none;
+    content: '';
+    position: absolute;
+    left: -10%;
+    right: -10%;
+    bottom: 0;
+    height: 200px;
+    background: linear-gradient(
+      to bottom,
+      rgba(253, 252, 248, 1) 0%,
+      rgba(253, 252, 248, 0.3) 40%,
+      rgba(253, 252, 248, 0) 100%
+    );
+    pointer-events: none;
+    z-index: 1;
   }
 }
 
