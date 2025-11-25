@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-stone-200;
+  }
+  
+  html {
+    @apply scroll-smooth;
+    background-color: #FDFCF8;
+  }
+  
+  body {
+    @apply bg-paper text-ink antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer utilities {
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-ida;
+  }
+  
+  button:focus-visible,
+  a:focus-visible {
+    @apply ring-2 ring-ida ring-offset-2;
+  }
+}
