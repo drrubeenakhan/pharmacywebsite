@@ -392,17 +392,29 @@ const StatusCard = ({ onNavigate, reviewStats }: { onNavigate: (slug: string) =>
          </div>
       </div>
 
-      {/* Featured Read - Frosted Glass */}
-      <div className="mt-auto bg-white/75 backdrop-blur-sm -mx-6 -mb-6 p-5 border-t border-white/50 group cursor-pointer hover:bg-white/85 transition-colors rounded-b-2xl" onClick={() => onNavigate(BLOG_POSTS[0].id)}>
+      {/* Featured Read - Frosted Glass Panel */}
+      <div 
+        className="mt-auto -mx-6 -mb-6 p-5 rounded-b-2xl cursor-pointer group
+          bg-gradient-to-br from-stone-50/90 to-white/80 backdrop-blur-sm
+          border-t border-stone-100/80
+          shadow-[inset_0_1px_0_0_rgba(255,255,255,0.8)]
+          hover:from-stone-100/90 hover:to-stone-50/80 hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,1),0_-2px_8px_-2px_rgba(0,0,0,0.04)]
+          transition-all duration-200 ease-out" 
+        onClick={() => onNavigate(BLOG_POSTS[0].id)}
+      >
         <div className="flex items-center justify-between mb-2">
-          <span className="text-[10px] font-bold uppercase tracking-widest text-ink-light/80">Pharmacy Desk</span>
-          <span className="text-[10px] font-medium text-ida bg-white/90 border border-ida/20 px-1.5 py-0.5 rounded shadow-sm">New Post</span>
+          <span className="text-[10px] font-bold uppercase tracking-widest text-ink-light/70">Pharmacy Desk</span>
+          <span className="text-[10px] font-medium text-ida bg-white border border-ida/20 px-1.5 py-0.5 rounded shadow-sm 
+            group-hover:bg-ida group-hover:text-white group-hover:border-ida
+            transition-all duration-200">New Post</span>
         </div>
         
-        <h4 className="font-serif text-lg text-ink leading-snug mb-1 group-hover:text-ida transition-colors">
+        <h4 className="font-serif text-lg text-ink leading-snug mb-1 
+          group-hover:text-ida transition-colors duration-200">
           {BLOG_POSTS[0].title}
         </h4>
-        <p className="text-xs text-ink-light mb-0 line-clamp-1">{BLOG_POSTS[0].subtitle}</p>
+        <p className="text-xs text-ink-light mb-0 line-clamp-1 
+          group-hover:text-ink transition-colors duration-200">{BLOG_POSTS[0].subtitle}</p>
       </div>
   </div>
 );
