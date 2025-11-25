@@ -46,56 +46,18 @@
   isolation: isolate;
 }
 
-/* Background layer - Tablet (md: 768px - 1023px) */
+/* Background layer - Tablet (md: 768px - 1023px) with HiDPI support */
 @media (min-width: 768px) and (max-width: 1023px) {
-  .hero-section::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url('/images/hero-handprints-768.webp');
-    background-image: image-set(
-      url('/images/hero-handprints-768.webp') type('image/webp'),
-      url('/images/hero-handprints-768.jpg') type('image/jpeg')
-    );
-    background-attachment: scroll;
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
-    pointer-events: none;
-    z-index: 0;
-  }
-}
-
-/* Background layer - Small Desktop (lg: 1024px - 1279px) */
-@media (min-width: 1024px) and (max-width: 1279px) {
-  .hero-section::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url('/images/hero-handprints-1024.webp');
-    background-image: image-set(
-      url('/images/hero-handprints-1024.webp') type('image/webp'),
-      url('/images/hero-handprints-1024.jpg') type('image/jpeg')
-    );
-    background-attachment: scroll;
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
-    pointer-events: none;
-    z-index: 0;
-  }
-}
-
-/* Background layer - Medium Desktop (xl: 1280px - 1535px) */
-@media (min-width: 1280px) and (max-width: 1535px) {
   .hero-section::before {
     content: '';
     position: absolute;
     inset: 0;
     background-image: url('/images/hero-handprints-1440.webp');
     background-image: image-set(
-      url('/images/hero-handprints-1440.webp') type('image/webp'),
-      url('/images/hero-handprints-1440.jpg') type('image/jpeg')
+      url('/images/hero-handprints-1440.webp') type('image/webp') 1x,
+      url('/images/hero-handprints-3840.webp') type('image/webp') 2x,
+      url('/images/hero-handprints-1440.jpg') type('image/jpeg') 1x,
+      url('/images/hero-handprints-3840.jpg') type('image/jpeg') 2x
     );
     background-attachment: scroll;
     background-size: cover;
@@ -106,7 +68,51 @@
   }
 }
 
-/* Background layer - Large Desktop (2xl: 1536px - 2559px) */
+/* Background layer - Small Desktop (lg: 1024px - 1279px) with HiDPI support */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/images/hero-handprints-1440.webp');
+    background-image: image-set(
+      url('/images/hero-handprints-1440.webp') type('image/webp') 1x,
+      url('/images/hero-handprints-3840.webp') type('image/webp') 2x,
+      url('/images/hero-handprints-1440.jpg') type('image/jpeg') 1x,
+      url('/images/hero-handprints-3840.jpg') type('image/jpeg') 2x
+    );
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+/* Background layer - Medium Desktop (xl: 1280px - 1535px) with HiDPI support */
+@media (min-width: 1280px) and (max-width: 1535px) {
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/images/hero-handprints-1920.webp');
+    background-image: image-set(
+      url('/images/hero-handprints-1920.webp') type('image/webp') 1x,
+      url('/images/hero-handprints-3840.webp') type('image/webp') 2x,
+      url('/images/hero-handprints-1920.jpg') type('image/jpeg') 1x,
+      url('/images/hero-handprints-3840.jpg') type('image/jpeg') 2x
+    );
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+/* Background layer - Large Desktop (2xl: 1536px - 2559px) with HiDPI support */
 @media (min-width: 1536px) and (max-width: 2559px) {
   .hero-section::before {
     content: '';
