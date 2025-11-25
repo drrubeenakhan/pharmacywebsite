@@ -46,46 +46,6 @@
   isolation: isolate;
 }
 
-/* Background layer - Mobile (up to 767px) - Handprints at bottom */
-@media (max-width: 767px) {
-  .hero-section {
-    min-height: auto;
-    padding-bottom: 180px;
-  }
-  
-  .hero-section::before {
-    content: '';
-    position: absolute;
-    left: -10%;
-    right: -10%;
-    bottom: 0;
-    height: 200px;
-    background-image: url('/images/hero-handprints-mobile.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    pointer-events: none;
-    z-index: 0;
-  }
-  
-  .hero-section::after {
-    content: '';
-    position: absolute;
-    left: -10%;
-    right: -10%;
-    bottom: 0;
-    height: 200px;
-    background: linear-gradient(
-      to bottom,
-      rgba(253, 252, 248, 1) 0%,
-      rgba(253, 252, 248, 0.3) 40%,
-      rgba(253, 252, 248, 0) 100%
-    );
-    pointer-events: none;
-    z-index: 1;
-  }
-}
-
 /* Background layer - Tablet (md: 768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
   .hero-section::before {
