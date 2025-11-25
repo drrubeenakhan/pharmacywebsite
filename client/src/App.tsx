@@ -1314,9 +1314,11 @@ const App: React.FC = () => {
               Your child’s clinic and your family’s meds under one roof.
             </h1>
 
-            <p className="text-lg text-ink-light leading-relaxed mb-10 max-w-md">
-              Your neighbourhood pharmacy for the whole family. We work directly with your doctors to sort the details, and we offer free delivery across Meadowlands and Ancaster.
-            </p>
+            <div className="bg-white/75 backdrop-blur-sm rounded-xl p-5 mb-10 max-w-md border border-white/50 shadow-sm">
+              <p className="text-lg text-ink leading-relaxed">
+                Your neighbourhood pharmacy for the whole family. We work directly with your doctors to sort the details, and we offer free delivery across Meadowlands and Ancaster.
+              </p>
+            </div>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <Button variant="primary" className="px-6" onClick={() => navigateToHomeAndScroll('transfer')}>Move my prescriptions</Button>
