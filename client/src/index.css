@@ -46,8 +46,8 @@
   isolation: isolate;
 }
 
-/* Background layer - Desktop only (lg: 1024px+) */
-@media (min-width: 1024px) {
+/* Background layer - Tablet and Desktop (md: 768px+) */
+@media (min-width: 768px) {
   .hero-section::before {
     content: '';
     position: absolute;
@@ -61,7 +61,7 @@
     z-index: 0;
   }
   
-  /* Subtle scrim overlay for text readability - Desktop only */
+  /* Subtle scrim overlay for text readability - Tablet and Desktop */
   .hero-section::after {
     content: '';
     position: absolute;
@@ -84,6 +84,13 @@
 .hero-inner {
   position: relative;
   z-index: 2;
+}
+
+/* Tablet responsive adjustments for hero */
+@media (min-width: 768px) {
+  .hero-section {
+    min-height: clamp(500px, 65vh, 700px);
+  }
 }
 
 /* Desktop responsive adjustments for hero */
