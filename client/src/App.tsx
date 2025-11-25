@@ -870,7 +870,7 @@ const Footer = ({
   onNavigateToService: (id: string) => void,
   onNavigateToHomeAndScroll: (section: string) => void
 }) => (
-  <footer className="bg-ida text-white py-16 px-6 md:px-12 mt-auto">
+  <footer className="bg-ida text-white py-16 px-6 md:px-12 mt-auto relative isolate">
     <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
       {/* Column 1: Brand & Contact */}
       <div className="space-y-6">
@@ -888,7 +888,7 @@ const Footer = ({
                 href="https://www.google.com/maps/search/?api=1&query=Golf+Links+I.D.A.+Pharmacy&query_place_id=ChIJKWKmFaCFLIgR-DL7zWjlxb4" 
                 target="_blank" 
                 rel="noreferrer"
-                className="underline decoration-ida-light underline-offset-4 hover:text-white transition-colors"
+                className="hover:text-white transition-colors hover:underline"
               >
                 Get Directions
               </a>
@@ -1593,7 +1593,7 @@ const App: React.FC = () => {
       </div>
 
       {/* 5. CONTACT (Map) */}
-      <Section id="contact" dark className="border-t border-stone-200 pt-16 pb-24 md:pt-24 md:pb-32">
+      <Section id="contact" dark className="border-t border-stone-200 pt-16 pb-24 md:pt-24 md:pb-32 overflow-hidden">
          <div className="flex flex-col md:flex-row gap-12 lg:gap-20 items-start">
             
             {/* Map (Left on Desktop, Bottom on Mobile) */}
