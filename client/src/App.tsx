@@ -392,11 +392,11 @@ const StatusCard = ({ onNavigate, reviewStats }: { onNavigate: (slug: string) =>
          </div>
       </div>
 
-      {/* Featured Read */}
-      <div className="mt-auto bg-stone-50 -mx-6 -mb-6 p-5 border-t border-stone-100 group cursor-pointer hover:bg-stone-100 transition-colors" onClick={() => onNavigate(BLOG_POSTS[0].id)}>
+      {/* Featured Read - Frosted Glass */}
+      <div className="mt-auto bg-white/75 backdrop-blur-sm -mx-6 -mb-6 p-5 border-t border-white/50 group cursor-pointer hover:bg-white/85 transition-colors rounded-b-2xl" onClick={() => onNavigate(BLOG_POSTS[0].id)}>
         <div className="flex items-center justify-between mb-2">
-          <span className="text-[10px] font-bold uppercase tracking-widest text-ink-light/70">Pharmacy Desk</span>
-          <span className="text-[10px] font-medium text-ida bg-white border border-ida/20 px-1.5 py-0.5 rounded shadow-sm">New Post</span>
+          <span className="text-[10px] font-bold uppercase tracking-widest text-ink-light/80">Pharmacy Desk</span>
+          <span className="text-[10px] font-medium text-ida bg-white/90 border border-ida/20 px-1.5 py-0.5 rounded shadow-sm">New Post</span>
         </div>
         
         <h4 className="font-serif text-lg text-ink leading-snug mb-1 group-hover:text-ida transition-colors">
