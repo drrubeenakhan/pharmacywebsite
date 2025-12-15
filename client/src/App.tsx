@@ -1329,7 +1329,7 @@ const App: React.FC = () => {
 
             {/* Mobile subhead - concise version */}
             <p className="md:hidden text-base text-ink leading-relaxed mb-8 text-center">
-              Connected to your child's clinic — free local delivery — personal care from real pharmacists.
+              Connected to your child's clinic — Free local delivery — Personal care from real pharmacists
             </p>
 
             {/* Tablet/Desktop subhead - full version */}
