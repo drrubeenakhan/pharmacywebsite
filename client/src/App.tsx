@@ -371,7 +371,8 @@ const StatusCard = ({ onNavigate, reviewStats }: { onNavigate: (slug: string) =>
             </div>
          </div>
          
-         <div className="flex items-start gap-3">
+         {/* Hidden on mobile only */}
+         <div className="hidden md:flex items-start gap-3">
             <div className="bg-stone-100 p-1.5 rounded-md shrink-0 mt-0.5">
               <Car className="w-4 h-4 text-stone-500" />
             </div>
