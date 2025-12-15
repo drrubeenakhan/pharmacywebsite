@@ -1323,17 +1323,25 @@ const App: React.FC = () => {
             
             <span className="text-ida font-bold tracking-widest text-xs uppercase mb-6">Golf Links Neighbourhood Pharmacy</span>
             
-            <h1 className="font-serif text-5xl lg:text-6xl text-ink leading-[1.1] mb-6 tracking-tight">
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-ink leading-[1.1] mb-5 md:mb-6 tracking-tight">
               Your trusted Ancaster pharmacy for families and children.
             </h1>
 
-            <div className="bg-white/75 backdrop-blur-sm rounded-xl p-5 mb-10 max-w-md border border-white/50 shadow-sm">
+            {/* Mobile subhead - concise version */}
+            <div className="md:hidden bg-white/80 backdrop-blur-sm rounded-lg p-4 mb-8 border border-white/50 shadow-sm">
+              <p className="text-base text-ink leading-relaxed">
+                Connected to your child's clinic. Free local delivery. Personal care from real pharmacists.
+              </p>
+            </div>
+
+            {/* Tablet/Desktop subhead - full version */}
+            <div className="hidden md:block bg-white/75 backdrop-blur-sm rounded-xl p-5 mb-10 max-w-md border border-white/50 shadow-sm">
               <p className="text-lg text-ink leading-relaxed">
                 Integrated with your child's clinic, we coordinate directly with doctors to handle prescriptions the right way. Free prescription delivery across Ancaster and Meadowlands, with personal service you won't get from big-box pharmacies.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-10">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-8 md:mb-10">
               <Button variant="primary" className="px-6" onClick={() => navigateToHomeAndScroll('transfer')}>Move my prescriptions</Button>
               <Button variant="outline" className="border-stone-300 text-ink hover:border-ida" onClick={() => navigateToHomeAndScroll('contact')}>Refill an existing script</Button>
             </div>
