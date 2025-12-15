@@ -1324,12 +1324,12 @@ const App: React.FC = () => {
             <span className="text-ida font-bold tracking-widest text-xs uppercase mb-6">Golf Links Neighbourhood Pharmacy</span>
             
             <h1 className="font-serif text-5xl lg:text-6xl text-ink leading-[1.1] mb-6 tracking-tight">
-              Your child’s clinic and your family’s meds under one roof.
+              Your trusted Ancaster pharmacy for families and children.
             </h1>
 
             <div className="bg-white/75 backdrop-blur-sm rounded-xl p-5 mb-10 max-w-md border border-white/50 shadow-sm">
               <p className="text-lg text-ink leading-relaxed">
-                Your neighbourhood pharmacy for the whole family. We work directly with your doctors to sort the details, and we offer free delivery across Meadowlands and Ancaster.
+                Integrated with your child's clinic, we coordinate directly with doctors to handle prescriptions the right way. Free prescription delivery across Ancaster and Meadowlands, with personal service you won't get from big-box pharmacies.
               </p>
             </div>
 
