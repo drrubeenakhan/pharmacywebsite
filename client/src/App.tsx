@@ -1256,7 +1256,7 @@ const App: React.FC = () => {
         )}
       </nav>
 
-      <main className="flex-grow pb-20 md:pb-0">
+      <main className="flex-grow pb-14 md:pb-0">
       {/* VIEW ROUTING */}
       {currentView === 'RESOURCES_INDEX' && (
          <ResourcesIndexView onNavigate={navigateTo} />
@@ -1700,18 +1700,18 @@ const App: React.FC = () => {
 
       {/* Mobile Sticky Footer - Hidden on tablet/desktop */}
       <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
-        <div className="bg-white/95 backdrop-blur-sm border-t border-stone-200 px-4 py-3 shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
-          <div className="flex gap-3 max-w-lg mx-auto">
+        <div className="bg-white/98 backdrop-blur-md border-t border-stone-100 px-4 py-2 shadow-[0_-1px_3px_rgba(0,0,0,0.04)]">
+          <div className="flex gap-2 max-w-md mx-auto">
             <a 
               href="tel:2892398000" 
-              className="flex-1 flex items-center justify-center gap-2 bg-white border border-stone-300 text-ink font-medium py-3 rounded-lg transition-colors hover:border-ida hover:text-ida"
+              className="flex-1 flex items-center justify-center gap-1.5 text-ink text-sm font-medium py-2 rounded-md transition-colors hover:text-ida"
             >
-              <Phone className="w-4 h-4" />
-              <span>Call Us</span>
+              <Phone className="w-3.5 h-3.5" />
+              <span>Call</span>
             </a>
             <button 
               onClick={() => navigateToHomeAndScroll('transfer')}
-              className="flex-1 flex items-center justify-center gap-2 bg-ida text-white font-medium py-3 rounded-lg transition-colors hover:bg-ida-light shadow-sm"
+              className="flex-1 flex items-center justify-center gap-1.5 bg-ida text-white text-sm font-medium py-2 rounded-md transition-colors hover:bg-ida-light"
             >
               <span>Refill Now</span>
             </button>
