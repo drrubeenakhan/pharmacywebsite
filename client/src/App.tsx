@@ -1430,9 +1430,12 @@ const App: React.FC = () => {
           <p className="text-ink-light">Most people don’t switch pharmacies unless something is wrong. We fix the friction.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Card title="Real humans pick up" icon={<Phone className="w-6 h-6"/>}>
-            No endless phone trees. When you call, you speak to a pharmacist or technician right here in the clinic.
-          </Card>
+          {/* Hidden on mobile only */}
+          <div className="hidden md:block">
+            <Card title="Real humans pick up" icon={<Phone className="w-6 h-6"/>}>
+              No endless phone trees. When you call, you speak to a pharmacist or technician right here in the clinic.
+            </Card>
+          </div>
           <Card title="Delivery is free & clear" icon={<Truck className="w-6 h-6"/>}>
             No hidden fees or vague windows. We deliver to Meadowlands and Ancaster for free, often same-day.
           </Card>
