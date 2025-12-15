@@ -1393,8 +1393,8 @@ const App: React.FC = () => {
                  <p className="text-sm text-ink-light leading-relaxed">{reviewStats.totalReviews} local reviews from Meadowlands & Ancaster families.</p>
               </div>
               
-              {/* Tile 2 */}
-              <div className="bg-white border border-stone-200 rounded-xl p-6 shadow-sm flex flex-col h-full">
+              {/* Tile 2 - Hidden on mobile */}
+              <div className="bg-white border border-stone-200 rounded-xl p-6 shadow-sm hidden md:flex flex-col h-full">
                  <div className="flex items-center gap-2 mb-2 font-bold text-ink">
                     <Phone className="w-5 h-5 text-ida shrink-0" />
                     <span>Phones picked up</span>
