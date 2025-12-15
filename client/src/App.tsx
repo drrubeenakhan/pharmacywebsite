@@ -1328,7 +1328,7 @@ const App: React.FC = () => {
             </h1>
 
             {/* Mobile subhead - concise version */}
-            <p className="md:hidden text-base text-ink leading-relaxed mb-8">
+            <p className="md:hidden text-base text-ink leading-relaxed mb-8 text-center">
               Connected to your child's clinic — free local delivery — personal care from real pharmacists.
             </p>
 
