@@ -1356,7 +1356,7 @@ const App: React.FC = () => {
                    <div className="w-6 h-6 rounded-full bg-stone-100 border border-stone-200 flex items-center justify-center overflow-hidden">
                        <span className="font-serif text-[10px] font-bold text-ink-light">H</span>
                    </div>
-                   <span className="text-base font-semibold text-ink">Harsh Pharmacist</span>
+                   <span className="text-sm font-semibold text-ink">Harsh Pharmacist</span>
                </div>
             </div>
 
