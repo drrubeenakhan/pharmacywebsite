@@ -1255,7 +1255,7 @@ const App: React.FC = () => {
         )}
       </nav>
 
-      <main className="flex-grow">
+      <main className="flex-grow pb-20 md:pb-0">
       {/* VIEW ROUTING */}
       {currentView === 'RESOURCES_INDEX' && (
          <ResourcesIndexView onNavigate={navigateTo} />
@@ -1690,6 +1690,27 @@ const App: React.FC = () => {
         onNavigateToService={navigateToServiceDetail} 
         onNavigateToHomeAndScroll={navigateToHomeAndScroll} 
       />
+
+      {/* Mobile Sticky Footer - Hidden on tablet/desktop */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
+        <div className="bg-white/95 backdrop-blur-sm border-t border-stone-200 px-4 py-3 shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
+          <div className="flex gap-3 max-w-lg mx-auto">
+            <a 
+              href="tel:2892398000" 
+              className="flex-1 flex items-center justify-center gap-2 bg-white border border-stone-300 text-ink font-medium py-3 rounded-lg transition-colors hover:border-ida hover:text-ida"
+            >
+              <Phone className="w-4 h-4" />
+              <span>Call Us</span>
+            </a>
+            <button 
+              onClick={() => navigateToHomeAndScroll('transfer')}
+              className="flex-1 flex items-center justify-center gap-2 bg-ida text-white font-medium py-3 rounded-lg transition-colors hover:bg-ida-light shadow-sm"
+            >
+              <span>Refill Now</span>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
