@@ -1328,11 +1328,9 @@ const App: React.FC = () => {
             </h1>
 
             {/* Mobile subhead - concise version */}
-            <div className="md:hidden bg-white/80 backdrop-blur-sm rounded-lg p-4 mb-8 border border-white/50 shadow-sm">
-              <p className="text-base text-ink leading-relaxed">
-                Connected to your child's clinic. Free local delivery. Personal care from real pharmacists.
-              </p>
-            </div>
+            <p className="md:hidden text-base text-ink leading-relaxed mb-8">
+              Connected to your child's clinic — free local delivery — personal care from real pharmacists.
+            </p>
 
             {/* Tablet/Desktop subhead - full version */}
             <div className="hidden md:block bg-white/75 backdrop-blur-sm rounded-xl p-5 mb-10 max-w-md border border-white/50 shadow-sm">
