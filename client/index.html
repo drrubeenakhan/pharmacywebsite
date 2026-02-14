@@ -43,14 +43,27 @@
     "description": "Your neighbourhood pharmacy for the whole family. Inside Ancaster Central Children's Clinic.",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "1030 Golf Links Rd",
+      "streetAddress": "26 Legend Ct Unit 3",
       "addressLocality": "Ancaster",
       "addressRegion": "ON",
-      "postalCode": "L9K 1L8",
+      "postalCode": "L9K 1J3",
       "addressCountry": "CA"
     },
     "telephone": "+1-289-239-8000",
-    "openingHours": "Mo-Fr 09:00-18:00",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "00:00"
+      }
+    ],
     "priceRange": "$$",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
